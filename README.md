@@ -1,16 +1,47 @@
-# nd209-where-am-i
+# Where Am I?
 
-The package name is "my_robot".
+In this project, you will learn to utilize ROS packages to accurately localize a mobile robot inside a provided map in the Gazebo and RViz simulation environments.
 
-git clone into your catkin_ws/src folder, catkin_make and source, then run the following commands:
+Over the course of the project, as part of the Robotics Software Engineer Nanodegree, you will learn about several aspects of robotics with a focus on ROS, including -
 
-roslaunch my_robot world.launch
+- Building a mobile robot for simulated tasks.
 
-and 
+- Creating a ROS package that launches a custom r-obot model in a Gazebo world and utilizes packages like AMCL and the Navigation Stack.
 
-roslaunch my_robot amcl.launch 
+- Exploring, adding, and tuning specific parameters corresponding to each package to achieve the best possible localization results.
 
-on separate terminal.
+## Installation Instructions
 
+Some specific ROS packages might be required in order to complete the project -
+
+
+``` bash
+$ sudo apt-get install ros-kinetic-navigation
+$ sudo apt-get install ros-kinetic-map-server
+$ sudo apt-get install ros-kinetic-move-base
+$ rospack profile
+$ sudo apt-get install ros-kinetic-amcl
+```
+
+Once all the packages are installed, clone this repository to the src folder of your catkin workspace.
+
+
+## Run the Project
+
+You can launch it by running the following commands first -
+
+```bash
+$ cd ~/catkin_ws
+$ catkin_make
+$ source devel/setup.bash
+```
+
+And then run the following in *separate* terminals -
+
+``` bash
+$ roslaunch my_robot world.launch
+$ roslaunch my_robot amcl.launch
+
+```
 
 
